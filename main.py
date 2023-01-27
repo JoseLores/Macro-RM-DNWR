@@ -197,14 +197,14 @@ df["y_baseline"] = (df["y_baseline"] - xSS["y"]) / xSS["y"] * 100
 df["y_dnwr"] = (df["y_dnwr"] - ySS["y"]) / ySS["y"] * 100
 df["y_dnwr2"] = (df["y_dnwr2"] - zSS["y"]) / zSS["y"] * 100
 
-# Sort them for the plot (only necessary for line plots not anymore since I use scatter)
-# df_baseline = df[["y_baseline", "pi_baseline"]]
+# Rename and Sort them for the plot (only necessary for line plots not the scatter)
+df_baseline = df[["y_baseline", "pi_baseline"]]
 # df_baseline = df_baseline.sort_values(["y_baseline"])
 
-# df_dnwr = df[["y_dnwr", "pi_dnwr"]]
+df_dnwr = df[["y_dnwr", "pi_dnwr"]]
 # df_dnwr = df_dnwr.sort_values(["y_dnwr"])
 
-# df_dnwr2 = df[["y_dnwr2", "pi_dnwr2"]]
+df_dnwr2 = df[["y_dnwr2", "pi_dnwr2"]]
 # df_dnwr2 = df_dnwr2.sort_values(["y_dnwr2"])
 
 
