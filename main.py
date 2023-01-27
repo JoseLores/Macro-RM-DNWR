@@ -197,15 +197,15 @@ df["y_baseline"] = (df["y_baseline"] - xSS["y"]) / xSS["y"] * 100
 df["y_dnwr"] = (df["y_dnwr"] - ySS["y"]) / ySS["y"] * 100
 df["y_dnwr2"] = (df["y_dnwr2"] - zSS["y"]) / zSS["y"] * 100
 
-# Sort them for the plot
-df_baseline = df[["y_baseline", "pi_baseline"]]
-df_baseline = df_baseline.sort_values(["y_baseline"])
+# Sort them for the plot (only necessary for line plots not anymore since I use scatter)
+# df_baseline = df[["y_baseline", "pi_baseline"]]
+# df_baseline = df_baseline.sort_values(["y_baseline"])
 
-df_dnwr = df[["y_dnwr", "pi_dnwr"]]
-df_dnwr = df_dnwr.sort_values(["y_dnwr"])
+# df_dnwr = df[["y_dnwr", "pi_dnwr"]]
+# df_dnwr = df_dnwr.sort_values(["y_dnwr"])
 
-df_dnwr2 = df[["y_dnwr2", "pi_dnwr2"]]
-df_dnwr2 = df_dnwr2.sort_values(["y_dnwr2"])
+# df_dnwr2 = df[["y_dnwr2", "pi_dnwr2"]]
+# df_dnwr2 = df_dnwr2.sort_values(["y_dnwr2"])
 
 
 # Plot #
@@ -236,7 +236,7 @@ ax.scatter(
     marker=".",
 )
 
-ax.set_ylim(bottom=0.99, top=1.05)
+ax.set_ylim(bottom=0.99, top=1.04)
 ax.set_xlim(left=-2.5, right=2)
 ax.set_xlabel("Output Gap in %")
 ax.set_ylabel("Quarterly Inflation")
