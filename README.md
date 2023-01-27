@@ -1,5 +1,7 @@
 # Macro-RM-DNWR
-Repository for creating the figures included in my Final Project for the 'Research Module in Macroeconomics and Public Economics (University of Bonn, winter term 22/23). The paper is available [here](https://www.dropbox.com/s/3y4rdeay6jpu7n4/DNWR.pdf?dl=0)
+Repository for creating the figures included in my Final Project for the 'Research Module in Macroeconomics and Public Economics (University of Bonn, winter term 22/23).
+All results are produced using [`econpizza`](https://github.com/gboehl/econpizza) package by Gregor Böhl, Ph.D.
+The paper is available [here](https://www.dropbox.com/s/3y4rdeay6jpu7n4/DNWR.pdf?dl=0).
 
 ## models
 Contains the .yaml with the baseline medium-scale NK model and the model with downward nominal wage rigidity.
