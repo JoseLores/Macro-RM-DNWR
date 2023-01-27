@@ -1,0 +1,38 @@
+# Exclude every file or folder starting with a dot.
+exclude: ^\.
+repos:
+
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.3.0
+    hooks:
+    -   id: check-yaml
+    -   id: check-merge-conflict
+    -   id: trailing-whitespace
+    -   id: end-of-file-fixer
+
+-   repo: https://github.com/PyCQA/flake8
+    rev: 5.0.4
+    hooks:
+    -   id: flake8
+        types: [python]
+        additional_dependencies: [
+            flake8-alfred, flake8-bugbear, flake8-builtins, flake8-comprehensions,
+            flake8-docstrings, flake8-eradicate, flake8-print, flake8-rst-docstrings,
+            flake8-todo, pep8-naming, pydocstyle,
+        ]
+        # Harmonizing flake8 and black
+        args: [
+          '--max-line-length=88',
+          '--ignore=E203,E402,E501,E800,W503,F401',
+          '--select=B,C,E,F,W,T4,B9'
+        ]
+
+
+-   repo: https://github.com/psf/black
+    rev: 22.8.0
+    hooks:
+    -   id: black
+        language_version: python3.10
+        types: [python]
+
+
